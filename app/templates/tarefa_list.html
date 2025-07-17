@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Tarefas{% endblock %}
+
+{% block content %}
+
+<h2>Tarefas</h2>
+<ul>
+    {% for tarefas in object_list %}
+        <li>{{ tarefas.titulo }}</li>
+        <li>{{ tarefas.categoria }}</li>
+        <li>{{ tarefas.inclusao }}</li>
+        <li>{{ tarefas.concluida }}</li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}
