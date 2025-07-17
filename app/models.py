@@ -4,6 +4,8 @@ from django.db import models
 class Categoria(models.Model):
     categoria = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.categoria
 
 
 class Tarefa(models.Model):
@@ -13,4 +15,4 @@ class Tarefa(models.Model):
     inclusao = models.DateTimeField(auto_now_add=True)
     concluida = models.BooleanField()
 
-    
+
